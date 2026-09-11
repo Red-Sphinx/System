@@ -1,0 +1,430 @@
+====================
+=====   DATE   =====
+====================
+Fri 11 Sep 2026 22:29:32 SAST
+====================
+
+=====================
+=====    CPU    =====
+=====================
+
+===== lscpu =====
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           39 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  4
+On-line CPU(s) list:                     0-3
+Vendor ID:                               GenuineIntel
+Model name:                              11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz
+CPU family:                              6
+Model:                                   140
+Thread(s) per core:                      2
+Core(s) per socket:                      2
+Socket(s):                               1
+Stepping:                                1
+CPU(s) scaling MHz:                      29%
+CPU max MHz:                             4100.0000
+CPU min MHz:                             400.0000
+BogoMIPS:                                5990.40
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l2 cdp_l2 ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid movdiri movdir64b fsrm avx512_vp2intersect md_clear ibt flush_l1d arch_capabilities
+Virtualization:                          VT-x
+L1d cache:                               96 KiB (2 instances)
+L1i cache:                               64 KiB (2 instances)
+L2 cache:                                2.5 MiB (2 instances)
+L3 cache:                                6 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0-3
+Vulnerability Gather data sampling:      Mitigation; Microcode
+Vulnerability Indirect target selection: Mitigation; Aligned branch/return thunks
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Not affected
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Not affected
+
+===== nproc =====
+4
+
+===== getconf _NPROCESSORS_ONLN =====
+4
+
+=====================
+=====    RAM    =====
+=====================
+
+===== free -h =====
+               total        used        free      shared  buff/cache   available
+Mem:            19Gi       3.3Gi       9.4Gi       497Mi       7.4Gi        15Gi
+Swap:          8.0Gi       256Ki       8.0Gi
+
+===== lsmem =====
+RANGE                                  SIZE  STATE REMOVABLE  BLOCK
+0x0000000000000000-0x0000000077ffffff  1.9G online       yes   0-14
+0x0000000100000000-0x000000057fffffff   18G online       yes 32-175
+
+Memory block size:                128M
+Total online memory:             19.9G
+Total offline memory:               0B
+
+===== sudo dmidecode -t memory =====
+# dmidecode 3.6
+Getting SMBIOS data from sysfs.
+SMBIOS 3.3.0 present.
+
+Handle 0x0012, DMI type 16, 23 bytes
+Physical Memory Array
+	Location: System Board Or Motherboard
+	Use: System Memory
+	Error Correction Type: None
+	Maximum Capacity: 128 GB
+	Error Information Handle: Not Provided
+	Number Of Devices: 2
+
+Handle 0x001C, DMI type 17, 92 bytes
+Memory Device
+	Array Handle: 0x0012
+	Error Information Handle: Not Provided
+	Total Width: 64 bits
+	Data Width: 64 bits
+	Size: 4 GB
+	Form Factor: SODIMM
+	Set: None
+	Locator: Controller0-ChannelA
+	Bank Locator: BANK 0
+	Type: DDR4
+	Type Detail: Synchronous
+	Speed: 3200 MT/s
+	Manufacturer: Samsung
+	Serial Number: 00000000
+	Asset Tag: 9876543210
+	Part Number: M471A5244CB0-CWE    
+	Rank: 1
+	Configured Memory Speed: 3200 MT/s
+	Minimum Voltage: 1.2 V
+	Maximum Voltage: 1.2 V
+	Configured Voltage: 1.2 V
+	Memory Technology: DRAM
+	Memory Operating Mode Capability: Volatile memory
+	Firmware Version: Not Specified
+	Module Manufacturer ID: Bank 1, Hex 0xCE
+	Module Product ID: Unknown
+	Memory Subsystem Controller Manufacturer ID: Unknown
+	Memory Subsystem Controller Product ID: Unknown
+	Non-Volatile Size: None
+	Volatile Size: 4 GB
+	Cache Size: None
+	Logical Size: None
+
+Handle 0x001D, DMI type 17, 92 bytes
+Memory Device
+	Array Handle: 0x0012
+	Error Information Handle: Not Provided
+	Total Width: 64 bits
+	Data Width: 64 bits
+	Size: 16 GB
+	Form Factor: SODIMM
+	Set: None
+	Locator: Controller1-ChannelA-DIMM0
+	Bank Locator: BANK 0
+	Type: DDR4
+	Type Detail: Synchronous
+	Speed: 3200 MT/s
+	Manufacturer: Crucial Technology
+	Serial Number: 28A8D820
+	Asset Tag: 9876543210
+	Part Number: CT16G4SFRA32A.C8FB  
+	Rank: 2
+	Configured Memory Speed: 3200 MT/s
+	Minimum Voltage: 1.2 V
+	Maximum Voltage: 1.2 V
+	Configured Voltage: 1.2 V
+	Memory Technology: DRAM
+	Memory Operating Mode Capability: Volatile memory
+	Firmware Version: Not Specified
+	Module Manufacturer ID: Bank 6, Hex 0x9B
+	Module Product ID: Unknown
+	Memory Subsystem Controller Manufacturer ID: Unknown
+	Memory Subsystem Controller Product ID: Unknown
+	Non-Volatile Size: None
+	Volatile Size: 16 GB
+	Cache Size: None
+	Logical Size: None
+
+
+=======================
+===== Motherboard =====
+=======================
+
+===== sudo dmidecode -t baseboard =====
+# dmidecode 3.6
+Getting SMBIOS data from sysfs.
+SMBIOS 3.3.0 present.
+
+Handle 0x0002, DMI type 2, 15 bytes
+Base Board Information
+	Manufacturer: ASUSTeK COMPUTER INC.
+	Product Name: X415EA
+	Version: 1.0       
+	Serial Number: M938NBCV00TFHAMB
+	Asset Tag: ATN12345678901234567
+	Features:
+		Board is a hosting board
+		Board is replaceable
+	Location In Chassis: MIDDLE              
+	Chassis Handle: 0x0003
+	Type: Motherboard
+	Contained Object Handles: 0
+
+Handle 0x003D, DMI type 10, 26 bytes
+On Board Device 1 Information
+	Type: Video
+	Status: Enabled
+	Description: VGA
+On Board Device 2 Information
+	Type: Ethernet
+	Status: Enabled
+	Description: GLAN
+On Board Device 3 Information
+	Type: Ethernet
+	Status: Enabled
+	Description: WLAN
+On Board Device 4 Information
+	Type: Sound
+	Status: Enabled
+	Description: Audio CODEC
+On Board Device 5 Information
+	Type: SATA Controller
+	Status: Enabled
+	Description: SATA Controller
+On Board Device 6 Information
+	Type: Other
+	Status: Enabled
+	Description: USB 2.0 Controller
+On Board Device 7 Information
+	Type: Other
+	Status: Enabled
+	Description: USB 3.0 Controller
+On Board Device 8 Information
+	Type: Other
+	Status: Enabled
+	Description: SMBus Controller
+On Board Device 9 Information
+	Type: Other
+	Status: Enabled
+	Description: Card Reader
+On Board Device 10 Information
+	Type: Other
+	Status: Enabled
+	Description: Cmos Camera
+On Board Device 11 Information
+	Type: Other
+	Status: Enabled
+	Description: Bluetooth
+
+Handle 0x0041, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: VGA
+	Type: Video
+	Status: Enabled
+	Type Instance: 1
+	Bus Address: 0000:00:02.0
+
+Handle 0x0042, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: WLAN
+	Type: Ethernet
+	Status: Enabled
+	Type Instance: 1
+	Bus Address: 0000:00:14.3
+
+
+====================
+=====   BIOS   =====
+====================
+
+===== sudo dmidecode -t bios =====
+# dmidecode 3.6
+Getting SMBIOS data from sysfs.
+SMBIOS 3.3.0 present.
+
+Handle 0x0000, DMI type 0, 26 bytes
+BIOS Information
+	Vendor: American Megatrends International, LLC.
+	Version: X415EA.305
+	Release Date: 09/06/2021
+	Address: 0xF0000
+	Runtime Size: 64 kB
+	ROM Size: 16 MB
+	Characteristics:
+		PCI is supported
+		BIOS is upgradeable
+		BIOS shadowing is allowed
+		Boot from CD is supported
+		Selectable boot is supported
+		BIOS ROM is socketed
+		EDD is supported
+		ACPI is supported
+		Smart battery is supported
+		BIOS boot specification is supported
+		Targeted content distribution is supported
+		UEFI is supported
+	BIOS Revision: 5.19
+
+Handle 0x0007, DMI type 13, 22 bytes
+BIOS Language Information
+	Language Description Format: Long
+	Installable Languages: 1
+		en|US|iso8859-1
+	Currently Installed Language: en|US|iso8859-1
+
+Handle 0x0044, DMI type 13, 22 bytes
+BIOS Language Information
+	Language Description Format: Abbreviated
+	Installable Languages: 1
+		enUS
+	Currently Installed Language: enUS
+
+
+=====================
+=====  Storage  =====
+=====================
+
+===== lsblk =====
+NAME          MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+sda             8:0    0   1.8T  0 disk 
+└─sda1          8:1    0   1.8T  0 part /mnt/DATA_2TB
+sdb             8:16   0 953.9G  0 disk 
+├─sdb1          8:17   0 190.8G  0 part /
+├─sdb2          8:18   0 190.8G  0 part 
+├─sdb3          8:19   0 190.8G  0 part 
+├─sdb4          8:20   0     1K  0 part 
+├─sdb5          8:21   0 190.8G  0 part 
+├─sdb6          8:22   0   512M  0 part 
+├─sdb7          8:23   0     1G  0 part 
+└─sdb8          8:24   0 189.3G  0 part 
+  ├─rhel-swap 254:0    0     8G  0 lvm  
+  └─rhel-root 254:1    0 181.3G  0 lvm  
+sdc             8:32   1  29.7G  0 disk /media/david/DRS_NTS
+nvme0n1       259:0    0 238.5G  0 disk 
+├─nvme0n1p1   259:1    0   260M  0 part /boot/efi
+├─nvme0n1p2   259:2    0    16M  0 part 
+├─nvme0n1p3   259:3    0 139.3G  0 part 
+├─nvme0n1p4   259:4    0  97.7G  0 part 
+├─nvme0n1p5   259:5    0     1G  0 part 
+└─nvme0n1p6   259:6    0   200M  0 part 
+
+===== lsblk -f =====
+NAME          FSTYPE      FSVER    LABEL       UUID                                   FSAVAIL FSUSE% MOUNTPOINTS
+sda                                                                                                  
+└─sda1        exfat       1.0      DATA_2TB    EFF5-75F8                                 1.3T    30% /mnt/DATA_2TB
+sdb                                                                                                  
+├─sdb1        ext4        1.0                  5d87c7bb-7a47-4bb0-8517-e0462344bbde      114G    34% /
+├─sdb2        ntfs                 MVS_SRS     42FE67DDFE67C82D                                      
+├─sdb3        ntfs                 EDU         EEF699ECF699B4F5                                      
+├─sdb4                                                                                               
+├─sdb5        ntfs                 CONF        244CC72F4CC6FB16                                      
+├─sdb6        vfat        FAT32    RHEL-EFI512 94EA-8641                                             
+├─sdb7        xfs                  /BOOT       246891aa-c947-4c2f-b722-f174916b7c6f                  
+└─sdb8        LVM2_member LVM2 001             3b40O7-XvIC-X7Un-3Oq5-RnUY-et8d-yX9B0B                
+  ├─rhel-swap swap        1        RHEL-SWAP   db51b382-b960-4455-bd9f-2b733d9ed62c                  
+  └─rhel-root xfs                  RHEL10      4dd57102-2d90-4f4d-9836-0336a2a4b7db                  
+sdc           exfat       1.0      DRS_NTS     F890-3570                                 3.1G    90% /media/david/DRS_NTS
+nvme0n1                                                                                              
+├─nvme0n1p1   vfat        FAT32    SYSTEM      4C2F-50D7                               195.2M    24% /boot/efi
+├─nvme0n1p2                                                                                          
+├─nvme0n1p3   BitLocker   2                    0b0e97f8-a9fd-4309-9bfd-68dcc37ec793                  
+├─nvme0n1p4   BitLocker   2                    ff30e356-2ae9-489a-88f1-2e39879f3ec7                  
+├─nvme0n1p5   ntfs                 RECOVERY    762C95602C951C65                                      
+└─nvme0n1p6   vfat        FAT32    MYASUS      CC11-AB7F                                             
+
+===== lsblk -d -o NAME,SIZE,MODEL,SERIAL,TRAN,ROTA =====
+NAME      SIZE MODEL                          SERIAL           TRAN   ROTA
+sda       1.8T CT2000BX500SSD1                2545E9CD16BE     usb       1
+sdb     953.9G SL300                          5224600072804746 usb       0
+sdc      29.7G Flash Drive                    0A2B2FB4F370D    usb       1
+nvme0n1 238.5G WDC PC SN530 SDBPNPZ-256G-1002 21364H804836     nvme      0
+
+====================
+=====   NVMe   =====
+====================
+
+===== sudo nvme list =====
+Node                  Generic               SN                   Model                                    Namespace  Usage                      Format           FW Rev  
+--------------------- --------------------- -------------------- ---------------------------------------- ---------- -------------------------- ---------------- --------
+/dev/nvme0n1          /dev/ng0n1            21364H804836         WDC PC SN530 SDBPNPZ-256G-1002           0x1        256.06  GB / 256.06  GB    512   B +  0 B   21106000
+
+=======================
+===== PCI devices =====
+=======================
+
+===== lspci =====
+0000:00:00.0 Host bridge: Intel Corporation Tiger Lake-UP3 2 cores Host Bridge/DRAM Registers (rev 01)
+0000:00:02.0 VGA compatible controller: Intel Corporation Tiger Lake-LP GT2 [UHD Graphics G4] (rev 01)
+0000:00:04.0 Signal processing controller: Intel Corporation TigerLake-LP Dynamic Tuning Processor Participant (rev 01)
+0000:00:08.0 System peripheral: Intel Corporation GNA Scoring Accelerator module (rev 01)
+0000:00:0a.0 Signal processing controller: Intel Corporation Tigerlake Telemetry Aggregator Driver (rev 01)
+0000:00:0e.0 RAID bus controller: Intel Corporation Volume Management Device NVMe RAID Controller
+0000:00:14.0 USB controller: Intel Corporation Tiger Lake-LP USB 3.2 Gen 2x1 xHCI Host Controller (rev 20)
+0000:00:14.2 RAM memory: Intel Corporation Tiger Lake-LP Shared SRAM (rev 20)
+0000:00:14.3 Network controller: Intel Corporation Wi-Fi 6 AX201 (rev 20)
+0000:00:15.0 Serial bus controller: Intel Corporation Tiger Lake-LP Serial IO I2C Controller #0 (rev 20)
+0000:00:15.1 Serial bus controller: Intel Corporation Tiger Lake-LP Serial IO I2C Controller #1 (rev 20)
+0000:00:16.0 Communication controller: Intel Corporation Tiger Lake-LP Management Engine Interface (rev 20)
+0000:00:17.0 System peripheral: Intel Corporation RST VMD Managed Controller
+0000:00:1c.0 PCI bridge: Intel Corporation Tiger Lake-LP PCI Express Root Port (rev 20)
+0000:00:1e.0 Communication controller: Intel Corporation Tiger Lake-LP Serial IO UART Controller #0 (rev 20)
+0000:00:1e.2 Serial bus controller: Intel Corporation Device a0aa (rev 20)
+0000:00:1f.0 ISA bridge: Intel Corporation Tiger Lake-LP LPC Controller (rev 20)
+0000:00:1f.3 Audio device: Intel Corporation Tiger Lake-LP Smart Sound Technology Audio Controller (rev 20)
+0000:00:1f.4 SMBus: Intel Corporation Tiger Lake-LP SMBus Controller (rev 20)
+0000:00:1f.5 Serial bus controller: Intel Corporation Tiger Lake-LP SPI Controller (rev 20)
+10000:e0:17.0 SATA controller: Intel Corporation Tiger Lake-LP SATA Controller (rev 20)
+10000:e0:1c.0 System peripheral: Intel Corporation RST VMD Managed Controller
+10000:e0:1c.4 PCI bridge: Intel Corporation Tiger Lake-LP PCI Express Root Port #5 (rev 20)
+10000:e1:00.0 Non-Volatile memory controller: Sandisk Corp SanDisk Ultra 3D / WD PC SN530, IX SN530, Blue SN550 NVMe SSD (DRAM-less) (rev 01)
+
+========================
+===== Temperatures =====
+========================
+
+===== sensors =====
+coretemp-isa-0000
+Adapter: ISA adapter
+Package id 0:  +41.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 0:        +38.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 1:        +36.0°C  (high = +100.0°C, crit = +100.0°C)
+
+asus-isa-000a
+Adapter: ISA adapter
+cpu_fan:     2500 RPM
+pwm1:             N/A
+
+nvme-pci-e100
+Adapter: PCI adapter
+Composite:    +28.9°C  (low  =  -5.2°C, high = +79.8°C)
+                       (crit = +84.8°C)
+
+acpitz-acpi-0
+Adapter: ACPI interface
+temp1:        +41.0°C  
+
+iwlwifi_1-virtual-0
+Adapter: Virtual device
+temp1:        +41.0°C  
+
+BAT0-acpi-0
+Adapter: ACPI interface
+in0:           7.85 V  
+power1:        0.00 W  
+
