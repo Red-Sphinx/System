@@ -49,7 +49,21 @@ The resulting system has 20 GB of RAM:
 
 Initial memory testing with `memtester` completed two passes over 12 GiB with no reported errors.
 
-Further RAM validation will be documented separately.
+## RAM validation
+
+The 20 GB configuration was tested using both `memtester`
+and Memtest86+.
+
+`memtester` completed two passes over 12 GiB with no errors.
+
+Memtest86+ v7.20 then tested 19.7 GB for four complete passes
+over 4:28:45 with zero errors.
+
+The RAM upgrade is considered successfully validated.
+
+Detailed results are documented in:
+
+`results/ram-validation-20GB.txt`
 
 ## Storage upgrade
 

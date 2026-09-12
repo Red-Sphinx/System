@@ -1,0 +1,50 @@
+20 GB RAM Validation
+====================
+
+System:
+ASUS VivoBook X415EA
+Intel Core i3-1115G4
+
+Installed memory:
+- 4 GB Samsung onboard DDR4-3200
+- 16 GB Crucial CT16G4SFRA32A.C8FB DDR4-3200
+- Total installed: 20 GB
+
+Test 1 - memtester
+------------------
+
+Command:
+
+sudo memtester 12G 2
+
+Result:
+
+- 12 GiB tested
+- 2 passes completed
+- 0 errors
+
+Test 2 - Memtest86+
+-------------------
+
+Version:
+Memtest86+ v7.20
+
+Result:
+
+- 19.7 GB memory tested
+- 4 complete passes
+- Runtime: 4:28:45
+- Errors: 0
+
+During the test:
+- All 4 logical CPU threads were used.
+- CPU temperature reached approximately 94°C.
+- The system completed the test without errors or thermal shutdown.
+
+Conclusion
+----------
+
+The 20 GB RAM configuration passed both the Linux-level
+memtester test and the boot-level Memtest86+ test.
+
+The RAM upgrade is considered successfully validated.
