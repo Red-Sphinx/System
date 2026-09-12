@@ -1,0 +1,91 @@
+2 TB SATA SSD Validation
+========================
+
+System:
+ASUS VivoBook X415EA
+Intel Core i3-1115G4
+
+Drive:
+Crucial BX500 CT2000BX500SSD1
+Capacity: 2,000,398,934,016 bytes [2.00 TB]
+Firmware: M6CR091
+
+Installation:
+- 2.5-inch SATA SSD installed in the laptop's internal SATA bay
+- ASUS HDD FFC cable
+- FFC cable part number: 04022-00080000
+
+Connection validation
+---------------------
+
+Linux identifies the drive as:
+
+CT2000BX500SSD1
+Transport: SATA
+
+Kernel reported:
+
+SATA link up 6.0 Gbps
+
+The drive was therefore successfully detected through
+the laptop's internal SATA interface rather than the
+previous SATA-to-USB adapter.
+
+SMART reported:
+
+SATA Version: SATA 3.3, 6.0 Gb/s
+Current link speed: 6.0 Gb/s
+
+SMART health:
+PASSED
+
+Selected SMART results:
+
+- Reported uncorrectable errors: 0
+- Current pending ECC errors: 0
+- Offline uncorrectable errors: 0
+- UDMA CRC errors: 0
+- SATA interface downshift: 0
+
+Temperature:
+30°C at time of SMART check
+Recorded SMART temperature range: 26°C to 41°C
+
+Performance test
+----------------
+
+Command:
+
+sudo hdparm -t --direct /dev/sda
+
+Result:
+
+1442 MB in 3.00 seconds
+480.58 MB/sec
+
+Real-world validation
+---------------------
+
+The SSD was detected successfully by Windows 11
+through the internal SATA connection.
+
+The SSD was also detected successfully by Debian.
+
+A video stored on the BX500 was played successfully
+from the drive.
+
+Conclusion
+----------
+
+The 2 TB Crucial BX500 has been successfully installed
+and validated through the ASUS X415EA's internal SATA
+connection.
+
+The internal SATA link negotiated at 6.0 Gb/s and the
+drive achieved a sequential direct-read result of
+480.58 MB/sec.
+
+No SATA transmission errors or link downshifts were
+reported during validation.
+
+No further stress testing was considered necessary.

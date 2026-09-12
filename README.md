@@ -10,9 +10,11 @@ The project records system information, hardware observations, testing results, 
 
 - ASUS VivoBook X415EA
 - Intel Core i3-1115G4
-- 4 GB onboard DDR4 memory
-- One DDR4 SO-DIMM slot
+- 4 GB Samsung onboard DDR4-3200
+- 16 GB Crucial CT16G4SFRA32A.C8FB DDR4-3200
+- Total RAM: 20 GB
 - Existing 256 GB-class WD PC SN530 NVMe SSD
+- 2 TB Crucial BX500 2.5-inch SATA SSD
 
 ## Version 001 - Before installing the new 2TB SATA SSD and 16GB RAM
 
@@ -37,6 +39,21 @@ The project records system information, hardware observations, testing results, 
 - Baseline: 12 GB RAM
 - After RAM upgrade: 20 GB RAM
 - After SATA upgrade: 20 GB RAM + 2 TB SATA
+
+## Final configuration
+
+The upgrade project resulted in:
+
+- 20 GB DDR4 RAM
+- 256 GB-class WD PC SN530 NVMe SSD
+- 2 TB Crucial BX500 SATA SSD
+
+Both the RAM and SATA storage upgrades were tested after installation.
+
+The RAM passed `memtester` and Memtest86+ with zero errors.
+
+The SATA SSD was detected through the internal SATA interface,
+negotiated a 6.0 Gb/s link, passed SMART health checks, and achieved 480.58 MB/sec in a direct read test.
 
 ## RAM upgrade
 
@@ -67,9 +84,31 @@ Detailed results are documented in:
 
 ## Storage upgrade
 
-A 2 TB Crucial BX500 2.5-inch SATA SSD is planned for installation in the laptop's internal SATA bay.
+A 2 TB Crucial BX500 2.5-inch SATA SSD was installed in
+the laptop's internal 2.5-inch SATA bay using the ASUS HDD FFC cable.
 
-The SATA drive is not yet installed internally.
+The drive was successfully detected by both Windows 11
+and Debian.
+
+The internal SATA link negotiated at 6.0 Gb/s.
+
+A direct read test using `hdparm` produced:
+
+480.58 MB/sec
+
+SMART reported:
+
+- Health: PASSED
+- Current SATA speed: 6.0 Gb/s
+- UDMA CRC errors: 0
+- SATA interface downshift: 0
+- Temperature: 30°C at time of test
+
+A video stored on the drive was also successfully played.
+
+Detailed results are documented in:
+
+`results/sata-validation-2TB-internal.txt`
 
 ## NVMe PCIe observation
 
